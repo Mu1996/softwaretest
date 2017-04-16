@@ -8,6 +8,9 @@ public class ATMService {
   
   public void withDraw(String cardNo,int amount){
 	  Account a=dbconn.getAccount(cardNo);
+//	  此处有bug：
+//	  因为你输入的取钱金额是不能大于你的余额，不然余额将变成负数。
+//	  与实际不符
 	  int balance=a.getBalance()-amount;
 	  a.setBalance(balance);
 	  dbconn.updateAccount(a);
@@ -15,6 +18,9 @@ public class ATMService {
   
   public void deposit(String cardNo, int amount){
 	  Account a=dbconn.getAccount(cardNo);
+//	  此处有bug：
+//	  输入存钱金额，应该将余额相加，而不应该是减去
+//	  与实际不符
 	  int balance=a.getBalance()-amount;
 	  a.setBalance(balance);
 	  dbconn.updateAccount(a);
@@ -25,6 +31,9 @@ public class ATMService {
 	  Account b=dbconn.getAccount(toCardNo);
 	  int aBalance=a.getBalance()-amount;
 	  int bBalance=b.getBalance()+amount;
+//	  此处有bug：
+//	  输入转账金额是不能大于你的余额，不然余额将变成负数。
+//	  与实际不符
 	  a.setBalance(aBalance);
 	  b.setBalance(bBalance);
 	  dbconn.updateAccount(a);
