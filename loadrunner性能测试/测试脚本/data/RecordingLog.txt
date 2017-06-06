@@ -1,0 +1,180 @@
+[Network Analyzer (11c0: e0c)] ------------------------------------------------------------------------------------------
+[Network Analyzer (11c0: e0c)] Load Network Traffic Analyzers:
+[Network Analyzer (11c0: e0c)]     Analyzer Module: WPLUS (value=)
+[Network Analyzer (11c0: e0c)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter.dll)
+[Network Analyzer (11c0: e0c)]     + Network Analyzer: api_http_filter.dll @ GetHttpProtocolAnalyzer Loaded!
+[Network Analyzer (11c0: e0c)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter.dll
+[Network Analyzer (11c0: e0c)]     Analyzer Module: QTWeb (value=)
+[Network Analyzer (11c0: e0c)]     Analyzer Module: local_server (value=)
+[Network Analyzer (11c0: e0c)] ------------------------------------------------------------------------------------------
+[Network Analyzer (11c0:1194)] Address lookup for S16302-A08 = 172.17.118.108
+[Network Analyzer (11c0:169c)] Address lookup for S16302-A08 = 172.17.118.108
+[Network Analyzer (11c0:169c)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  1)  PROXIED!
+[Network Analyzer (11c0:1060)] Address lookup for S16302-A08 = 172.17.118.108
+[Web Request      (11c0:1194)] "GET /WebTours/"   
+[Network Analyzer (11c0:1194)]   (Sid:  1) Client -> Server : 327 bytes (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  1) Server -> Client : 164 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1060)] Request Connection: Remote Server @ 202.89.233.103:80   (Service=)  (Sid=  2)  PROXIED!
+[Network Analyzer (11c0:1194)]   (Sid:  1) Server -> Client : 312 bytes  (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /favicon.ico"   
+[Network Analyzer (11c0:1194)]   (Sid:  2) Client -> Server : 303 bytes (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  2) Server -> Client : 543 bytes  (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/header.html"   
+[Network Analyzer (11c0:1194)]   (Sid:  1) Client -> Server : 568 bytes (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  1) Server -> Client : 164 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  1) Server -> Client : 692 bytes  (Service=HTTP)
+[Network Analyzer (11c0:169c)] Address lookup for S16302-A08 = 172.17.118.108
+[Web Request      (11c0:1194)] "GET /WebTours/images/hp_logo.png"   
+[Network Analyzer (11c0:1194)]   (Sid:  1) Client -> Server : 398 bytes (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  1) Server -> Client : 164 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  1) Server -> Client : 601 bytes  (Service=HTTP)
+[Network Analyzer (11c0:169c)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  3)  PROXIED!
+[Web Request      (11c0:1194)] "GET /WebTours/images/webtours.png"   
+[Network Analyzer (11c0:1194)]   (Sid:  1) Client -> Server : 399 bytes (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/welcome.pl?signOff=true"   
+[Network Analyzer (11c0:1194)]   (Sid:  3) Client -> Server : 580 bytes (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  1) Server -> Client : 982 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  3) Server -> Client : 324 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  3) Server -> Client : 630 bytes  (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/nav.pl?in=home"   
+[Network Analyzer (11c0:1194)]   (Sid:  1) Client -> Server : 622 bytes (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/home.html"   
+[Network Analyzer (11c0:1194)]   (Sid:  3) Client -> Server : 617 bytes (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  3) Server -> Client : 165 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  3) Server -> Client : 1322 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  1) Server -> Client : 253 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  1) Server -> Client : 1394 bytes  (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/images/mer_login.gif"   
+[Network Analyzer (11c0:1194)]   (Sid:  3) Client -> Server : 431 bytes (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  3) Server -> Client : 164 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  3) Server -> Client : 679 bytes  (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /favicon.ico"   
+[Network Analyzer (11c0:1194)]   (Sid:  1) Client -> Server : 333 bytes (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  1) Server -> Client : 258 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  1) Connection Terminated (by Server)
+[Web Request      (11c0:1194)] "POST /WebTours/login.pl"   
+[Network Analyzer (11c0:1194)]   (Sid:  3) Client -> Server : 828 bytes (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  3) Server -> Client : 358 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  3) Server -> Client : 437 bytes  (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/nav.pl?page=menu&in=home"   
+[Network Analyzer (11c0:1194)]   (Sid:  3) Client -> Server : 730 bytes (Service=HTTP)
+[Network Analyzer (11c0:169c)] Address lookup for S16302-A08 = 172.17.118.108
+[Network Analyzer (11c0:169c)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  4)  PROXIED!
+[Network Analyzer (11c0:1194)]   (Sid:  3) Server -> Client : 253 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  3) Server -> Client : 1446 bytes  (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/login.pl?intro=true"   
+[Network Analyzer (11c0:1194)]   (Sid:  4) Client -> Server : 725 bytes (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/images/flights.gif"   
+[Network Analyzer (11c0:169c)] Address lookup for S16302-A08 = 172.17.118.108
+[Network Analyzer (11c0:1194)]   (Sid:  3) Client -> Server : 552 bytes (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  3) Server -> Client : 164 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  3) Server -> Client : 726 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1060)] Address lookup for S16302-A08 = 172.17.118.108
+[Web Request      (11c0:1194)] "GET /WebTours/images/in_home.gif"   
+[Network Analyzer (11c0:1194)]   (Sid:  3) Client -> Server : 552 bytes (Service=HTTP)
+[Network Analyzer (11c0:169c)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  5)  PROXIED!
+[Network Analyzer (11c0:1194)]   (Sid:  3) Server -> Client : 852 bytes  (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/images/itinerary.gif"   
+[Network Analyzer (11c0:1194)]   (Sid:  5) Client -> Server : 554 bytes (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  5) Server -> Client : 897 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1060)] Request Connection: Remote Server @ 127.0.0.1:1080   (Service=)  (Sid=  6)  PROXIED!
+[Network Analyzer (11c0:1194)]   (Sid:  4) Server -> Client : 225 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  4) Server -> Client : 913 bytes  (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/images/signoff.gif"   
+[Network Analyzer (11c0:1194)]   (Sid:  6) Client -> Server : 552 bytes (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  6) Server -> Client : 164 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  6) Server -> Client : 751 bytes  (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/welcome.pl?page=search"   
+[Network Analyzer (11c0:1194)]   (Sid:  3) Client -> Server : 744 bytes (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  3) Server -> Client : 175 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  3) Server -> Client : 560 bytes  (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/nav.pl?page=menu&in=flights"   
+[Network Analyzer (11c0:1194)]   (Sid:  5) Client -> Server : 747 bytes (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/reservations.pl?page=welcome"   
+[Network Analyzer (11c0:1194)]   (Sid:  4) Client -> Server : 748 bytes (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  5) Server -> Client : 253 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  4) Server -> Client : 4435 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  5) Server -> Client : 1446 bytes  (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/images/button_next.gif"   
+[Network Analyzer (11c0:1194)]   (Sid:  6) Client -> Server : 560 bytes (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/images/in_flights.gif"   
+[Network Analyzer (11c0:1194)]   (Sid:  3) Client -> Server : 558 bytes (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/images/home.gif"   
+[Network Analyzer (11c0:1194)]   (Sid:  4) Client -> Server : 552 bytes (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  3) Server -> Client : 890 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  6) Server -> Client : 922 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  4) Server -> Client : 852 bytes  (Service=HTTP)
+[Network Analyzer (1134:1614)] ------------------------------------------------------------------------------------------
+[Network Analyzer (1134:1614)] Load Network Traffic Analyzers:
+[Network Analyzer (1134:1614)]     Analyzer Module: WPLUS (value=)
+[Network Analyzer (1134:1614)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter.dll)
+[Network Analyzer (1134:1614)]     + Network Analyzer: api_http_filter.dll @ GetHttpProtocolAnalyzer Loaded!
+[Network Analyzer (1134:1614)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter.dll
+[Network Analyzer (1134:1614)]     Analyzer Module: QTWeb (value=)
+[Network Analyzer (1134:1614)]     Analyzer Module: local_server (value=)
+[Network Analyzer (1134:1614)] ------------------------------------------------------------------------------------------
+[Network Analyzer (1134:117c)] Address lookup for S16302-A08 = 172.17.118.108
+[Network Analyzer (1134:1614)] Address lookup for S16302-A08 = 172.17.118.108
+[Net An. Warning  (1134:1614)] Request Connection: Remote Server @ 0.0.0.0:1080 (Service=?) Failed attempt #1. Unable to connect to remote server: rc = -1 , le = 0)
+[Net An. Warning  (1134:1614)] Request Connection: Remote Server @ 0.0.0.0:1080 (Service=?) Failed attempt #2. Unable to connect to remote server: rc = -1 , le = 0)
+[Net An. Warning  (1134:1614)] Request Connection: Remote Server @ 0.0.0.0:1080 (Service=?) Failed attempt #3. Unable to connect to remote server: rc = -1 , le = 0)
+[Net An. Error    (1134:1614)] Request Connection: Remote Server @ 0.0.0.0:1080   (Service=?)  NOT PROXIED! (REASON: Unable to connect to remote server: rc = -1 , le = 0)
+[Web Request      (11c0:1194)] "POST /WebTours/reservations.pl"   
+[Network Analyzer (11c0:1194)]   (Sid:  5) Client -> Server : 1073 bytes (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  5) Server -> Client : 253 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  5) Server -> Client : 2336 bytes  (Service=HTTP)
+[Web Request      (11c0:1194)] "POST /WebTours/reservations.pl"   
+[Network Analyzer (11c0:1194)]   (Sid:  3) Client -> Server : 965 bytes (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  3) Server -> Client : 253 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  3) Server -> Client : 2672 bytes  (Service=HTTP)
+[Web Request      (11c0:1194)] "POST /WebTours/reservations.pl"   
+[Network Analyzer (11c0:1194)]   (Sid:  6) Client -> Server : 1103 bytes (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  6) Server -> Client : 362 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  6) Server -> Client : 2390 bytes  (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/images/bookanother.gif"   
+[Network Analyzer (11c0:1194)]   (Sid:  4) Client -> Server : 523 bytes (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  4) Server -> Client : 164 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  4) Server -> Client : 806 bytes  (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/welcome.pl?page=menus"   
+[Network Analyzer (11c0:1194)]   (Sid:  5) Client -> Server : 722 bytes (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  5) Server -> Client : 175 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  5) Server -> Client : 540 bytes  (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/nav.pl?page=menu&in=home"   
+[Network Analyzer (11c0:1194)]   (Sid:  3) Client -> Server : 719 bytes (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/login.pl?intro=true"   
+[Network Analyzer (11c0:1194)]   (Sid:  6) Client -> Server : 714 bytes (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  6) Server -> Client : 225 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  3) Server -> Client : 1699 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  6) Server -> Client : 913 bytes  (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/welcome.pl?page=itinerary"   
+[Network Analyzer (11c0:1194)]   (Sid:  4) Client -> Server : 723 bytes (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  4) Server -> Client : 175 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  4) Server -> Client : 535 bytes  (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/nav.pl?page=menu&in=itinerary"   
+[Network Analyzer (11c0:1194)]   (Sid:  5) Client -> Server : 728 bytes (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/itinerary.pl"   
+[Network Analyzer (11c0:1194)]   (Sid:  3) Client -> Server : 711 bytes (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  5) Server -> Client : 253 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  3) Server -> Client : 3805 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  5) Server -> Client : 1446 bytes  (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/images/cancelreservation.gif"   
+[Network Analyzer (11c0:1194)]   (Sid:  6) Client -> Server : 526 bytes (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/images/in_itinerary.gif"   
+[Network Analyzer (11c0:1194)]   (Sid:  3) Client -> Server : 538 bytes (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/images/cancelallreservations.gif"   
+[Network Analyzer (11c0:1194)]   (Sid:  4) Client -> Server : 530 bytes (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  3) Server -> Client : 897 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  6) Server -> Client : 995 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  4) Server -> Client : 906 bytes  (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/welcome.pl?signOff=1"   
+[Network Analyzer (11c0:1194)]   (Sid:  5) Client -> Server : 723 bytes (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  5) Server -> Client : 324 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  5) Server -> Client : 630 bytes  (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/nav.pl?in=home"   
+[Network Analyzer (11c0:1194)]   (Sid:  3) Client -> Server : 619 bytes (Service=HTTP)
+[Web Request      (11c0:1194)] "GET /WebTours/home.html"   
+[Network Analyzer (11c0:1194)]   (Sid:  6) Client -> Server : 614 bytes (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  6) Server -> Client : 165 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  6) Server -> Client : 1322 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  3) Server -> Client : 253 bytes  (Service=HTTP)
+[Network Analyzer (11c0:1194)]   (Sid:  3) Server -> Client : 1394 bytes  (Service=HTTP)

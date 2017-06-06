@@ -1,0 +1,50 @@
+虚拟用户脚本已从 : 2017-05-24 11:36:32 启动
+正在开始操作 vuser_init。
+Windows 7 版 LoadRunner 11.0.0 的 Web Turbo 重播; 内部版本 8859 (Aug 18 2010 20:14:31)  	[MsgId: MMSG-27143]
+Run Mode: HTML  	[MsgId: MMSG-26000]
+运行时设置文件: "C:\Users\student\Desktop\myh test\test\\default.cfg"  	[MsgId: MMSG-27141]
+正在结束操作 vuser_init。
+正在运行 Vuser...
+正在开始迭代 1。
+正在开始操作 Action。
+Action.c(3): 集合 同时登陆
+Action.c(4): 在“http://127.0.0.1:1080/WebTours/”中检测到非资源“http://127.0.0.1:1080/WebTours/header.html”  	[MsgId: MMSG-26574]
+Action.c(4): 在“http://127.0.0.1:1080/WebTours/”中检测到非资源“http://127.0.0.1:1080/WebTours/welcome.pl?signOff=true”  	[MsgId: MMSG-26574]
+Action.c(4): 正在下载资源“http://www.bing.com/favicon.ico”(由参数编号 9 指定)  	[MsgId: MMSG-26577]
+Action.c(4): 在 HTML“http://127.0.0.1:1080/WebTours/header.html”中找到资源“http://127.0.0.1:1080/WebTours/images/hp_logo.png”  	[MsgId: MMSG-26659]
+Action.c(4): 在 HTML“http://127.0.0.1:1080/WebTours/header.html”中找到资源“http://127.0.0.1:1080/WebTours/images/webtours.png”  	[MsgId: MMSG-26659]
+Action.c(4): 在“http://127.0.0.1:1080/WebTours/welcome.pl?signOff=true”中检测到非资源“http://127.0.0.1:1080/WebTours/nav.pl?in=home”  	[MsgId: MMSG-26574]
+Action.c(4): 在“http://127.0.0.1:1080/WebTours/welcome.pl?signOff=true”中检测到非资源“http://127.0.0.1:1080/WebTours/home.html”  	[MsgId: MMSG-26574]
+Action.c(4): 在 HTML“http://127.0.0.1:1080/WebTours/nav.pl?in=home”中找到资源“http://127.0.0.1:1080/WebTours/images/mer_login.gif”  	[MsgId: MMSG-26659]
+Action.c(4): web_url("WebTours") 已成功，6747 个正文字节，1805 个标头字节  	[MsgId: MMSG-26386]
+Action.c(16): 通知: 事务 "登陆事务" 已启动。
+Action.c(17): 将表单提交到“http://127.0.0.1:1080/WebTours/login.pl”，目标帧=“body”  	[MsgId: MMSG-27978]
+Action.c(17): 在“http://127.0.0.1:1080/WebTours/login.pl”中检测到非资源“http://127.0.0.1:1080/WebTours/nav.pl?page=menu&in=home”  	[MsgId: MMSG-26574]
+Action.c(17): 在“http://127.0.0.1:1080/WebTours/login.pl”中检测到非资源“http://127.0.0.1:1080/WebTours/login.pl?intro=true”  	[MsgId: MMSG-26574]
+Action.c(17): 在 HTML“http://127.0.0.1:1080/WebTours/nav.pl?page=menu&in=home”中找到资源“http://127.0.0.1:1080/WebTours/images/flights.gif”  	[MsgId: MMSG-26659]
+Action.c(17): 在 HTML“http://127.0.0.1:1080/WebTours/nav.pl?page=menu&in=home”中找到资源“http://127.0.0.1:1080/WebTours/images/itinerary.gif”  	[MsgId: MMSG-26659]
+Action.c(17): 在 HTML“http://127.0.0.1:1080/WebTours/nav.pl?page=menu&in=home”中找到资源“http://127.0.0.1:1080/WebTours/images/in_home.gif”  	[MsgId: MMSG-26659]
+Action.c(17): 在 HTML“http://127.0.0.1:1080/WebTours/nav.pl?page=menu&in=home”中找到资源“http://127.0.0.1:1080/WebTours/images/signoff.gif”  	[MsgId: MMSG-26659]
+Action.c(17): web_submit_form("login.pl") 已成功，5694 个正文字节，1492 个标头字节  	[MsgId: MMSG-26386]
+Action.c(25): 通知: 事务 "登陆事务" 以 "Pass" 状态结束 (持续时间: 0.4668 浪费的时间: 0.0030)。
+Action.c(29): 链接到“http://127.0.0.1:1080/WebTours/welcome.pl?page=search”的图像，目标帧=“body”  	[MsgId: MMSG-27993]
+Action.c(29): 在“http://127.0.0.1:1080/WebTours/welcome.pl?page=search”中检测到非资源“http://127.0.0.1:1080/WebTours/nav.pl?page=menu&in=flights”  	[MsgId: MMSG-26574]
+Action.c(29): 在“http://127.0.0.1:1080/WebTours/welcome.pl?page=search”中检测到非资源“http://127.0.0.1:1080/WebTours/reservations.pl?page=welcome”  	[MsgId: MMSG-26574]
+Action.c(29): 在 HTML“http://127.0.0.1:1080/WebTours/nav.pl?page=menu&in=flights”中找到资源“http://127.0.0.1:1080/WebTours/images/in_flights.gif”  	[MsgId: MMSG-26659]
+Action.c(29): 资源“http://127.0.0.1:1080/WebTours/images/itinerary.gif”已在缓存中，不会再次下载  	[MsgId: MMSG-26655]
+Action.c(29): 在 HTML“http://127.0.0.1:1080/WebTours/nav.pl?page=menu&in=flights”中找到资源“http://127.0.0.1:1080/WebTours/images/home.gif”  	[MsgId: MMSG-26659]
+Action.c(29): 资源“http://127.0.0.1:1080/WebTours/images/signoff.gif”已在缓存中，不会再次下载  	[MsgId: MMSG-26655]
+Action.c(29): 在 HTML“http://127.0.0.1:1080/WebTours/reservations.pl?page=welcome”中找到资源“http://127.0.0.1:1080/WebTours/images/button_next.gif”  	[MsgId: MMSG-26659]
+Action.c(29): web_image("Search Flights Button") 已成功，8360 个正文字节，1173 个标头字节  	[MsgId: MMSG-26386]
+Action.c(36): 链接到“http://127.0.0.1:1080/WebTours/welcome.pl?signOff=1”的图像，目标帧=“body”  	[MsgId: MMSG-27993]
+Action.c(36): 在“http://127.0.0.1:1080/WebTours/welcome.pl?signOff=1”中检测到非资源“http://127.0.0.1:1080/WebTours/nav.pl?in=home”  	[MsgId: MMSG-26574]
+Action.c(36): 在“http://127.0.0.1:1080/WebTours/welcome.pl?signOff=1”中检测到非资源“http://127.0.0.1:1080/WebTours/home.html”  	[MsgId: MMSG-26574]
+Action.c(36): 从缓存中为“http://127.0.0.1:1080/WebTours/home.html”检索数据  	[MsgId: MMSG-26558]
+Action.c(36): 资源“http://127.0.0.1:1080/WebTours/images/mer_login.gif”已在缓存中，不会再次下载  	[MsgId: MMSG-26655]
+Action.c(36): web_image("SignOff Button") 已成功，2024 个正文字节，577 个标头字节  	[MsgId: MMSG-26386]
+正在结束操作 Action。
+正在结束迭代 1。
+正在结束 Vuser...
+正在开始操作 vuser_end。
+正在结束操作 vuser_end。
+Vuser 已终止。

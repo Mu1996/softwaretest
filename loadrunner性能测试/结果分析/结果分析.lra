@@ -1,0 +1,70 @@
+﻿[Workspace]
+SessionStartTime=0
+SessionEndTime=747
+VerNo=10
+IsSummaryData=0
+TimeFormat=3
+SesLang=CHS
+ABuild=0
+DataBaseName=resl17676159DB
+DBType=1
+CurrServer=S16302-A08
+CurrUser=sa
+CurrPswd===
+StorageLoc=\\S16302-A08\Data\
+PhStorageLoc=C:\MSSQL7\Data
+LocStorageLoc=
+LocPhStorageLoc=
+WinIntSec=0
+UseNetworkMode=0
+UseParallel=1
+UseManagedIndexes=1
+UseSpecMSSQLParams=1
+NumResults=1
+
+[Data Config]
+CollectionMode=2
+IngnoreFlds=Vuser ID
+IngnoreUIFlds=VuserID
+AggSecGran=1
+TransAgg=1
+DataPointAgg=1
+WebAgg=1
+MonAgg=0
+ErrAgg=0
+FilterEdge=0
+FSartTime=0
+FEndTime=0
+
+[Result0]
+LRRID=
+ResultPath=C:\Users\student\Desktop\myh test\test\res\res.lrr
+ResultTDPath=
+NumFilters=0
+ScenarioTimeZone=-28800
+DaylightSavingSecsAddition=0
+ScenarioStartTime=1495596531
+ScenarioEndTime=1495597278
+ResInSD=0
+WebGran=5
+FilterEdge=0
+FSartTime=0
+FEndTime=0
+TDTestID=-1
+TDRunID=-1
+IsProTuneResult=0
+Scenario Type=Manual
+Schedule Name=Default Schedule
+Mode=场景计划
+Load Behavior=属性
+Scenario Duration=直到完成
+NumGraphs=5
+
+[DimensionFunctions]
+DimeFuncCount=1
+DimeFuncType0=FuncFragment
+FunctionName_UI0=思考时间
+DimensionName_UI0=事务响应时间,Aminimum,Amaximum
+FunctionFragmentValues_UI0=-包括思考时间
+DimensionFragmentValues_UI0=!([Value]-[Think Time])!
+
