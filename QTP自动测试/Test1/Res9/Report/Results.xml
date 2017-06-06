@@ -1,0 +1,794 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE Report
+[
+<!ELEMENT Report (General ,(Doc|BPT)) >
+<!ATTLIST Report ver CDATA #REQUIRED tmZone CDATA #REQUIRED>
+
+<!ELEMENT General ( DocLocation ) >
+<!ATTLIST General productName CDATA #REQUIRED productVer CDATA #REQUIRED os CDATA #REQUIRED host CDATA #REQUIRED qcserver CDATA #IMPLIED qcproject CDATA #IMPLIED  >
+
+<!ELEMENT BPT (DName,Res,DVer?,TSet?,TInst?,NodeArgs,AdditionalInfo*,Doc*) >
+<!ATTLIST BPT rID ID #REQUIRED >
+
+<!ELEMENT Doc (DName,ConfName?,Res,DVer?,TSet?,TInst?,RunType?,DT?,AdditionalInfo*,Step*,DIter*,Step*,Action*,Doc*,Summary?,TestMaintenanceSummary*,NodeArgs?) >
+<!ATTLIST Doc rID ID #REQUIRED type (Test|BC|BPTWrapperTest|Flow|Group) "Test" productName CDATA #REQUIRED BCIter CDATA #IMPLIED >
+
+<!ELEMENT RunType ( #PCDATA )>
+<!ATTLIST RunType fmStep (False|True) "False" batch (False|True) "False" upDesc (False|True) "False" upChk (False|True) "False" upAS (False|True) "False">
+
+<!ELEMENT DName ( #PCDATA ) >
+
+<!ELEMENT ConfName ( #PCDATA ) >
+
+<!ELEMENT Res ( #PCDATA ) >
+
+<!ELEMENT AdditionalInfo (AdditionalDataName,AdditionalDataValue ) >
+
+<!ELEMENT AdditionalDataName ( #PCDATA ) >
+
+<!ELEMENT AdditionalDataValue ( #PCDATA ) >
+
+<!ELEMENT DVer ( #PCDATA ) >
+
+<!ELEMENT TSet ( #PCDATA ) >
+
+<!ELEMENT TInst ( #PCDATA ) >
+
+<!ELEMENT DIter (Step*,Action+,Summary?,NodeArgs)>
+<!ATTLIST DIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT DocLocation ( #PCDATA )>
+
+<!ELEMENT Action (AName,AIter*,(Step|HtmlStep|Action)*,Summary,ActionMaintenanceSummary*,NodeArgs ) >
+<!ATTLIST Action rID ID #REQUIRED>
+
+<!ELEMENT AIter ((Step|HtmlStep|Action)*,Summary?,NodeArgs) >
+<!ATTLIST AIter rID ID #REQUIRED iterID CDATA #REQUIRED>
+
+<!ELEMENT AName ( #PCDATA ) >
+
+<!ELEMENT TestMaintenanceSummary (ActionMaintenanceSummary*) >
+<!ATTLIST TestMaintenanceSummary ObjectsAdded CDATA #REQUIRED ObjectsUpdated CDATA #REQUIRED StepsUpdated CDATA #REQUIRED StepsComments CDATA #REQUIRED><!ELEMENT ActionMaintenanceSummary (ObjectChange* ) >
+<!ATTLIST ActionMaintenanceSummary Action CDATA #REQUIRED Objects CDATA #REQUIRED Updated CDATA #REQUIRED LinesTotal CDATA #REQUIRED Added CDATA #REQUIRED LinesUpdated CDATA #REQUIRED>
+
+<!ELEMENT ObjectChange  (Hierarchy, PropertyChangeList* ) >
+<!ATTLIST ObjectChange Operation CDATA #IMPLIED OriginalRepository CDATA #IMPLIED>
+
+<!ELEMENT PropertyChangeList (PropertyDef*) >
+
+<!ELEMENT PropertyDef (OriginalValue, NewValue) >
+<!ATTLIST PropertyDef PropName CDATA #REQUIRED OriginRegularExpression (True|False) "False" NewRegularExpression (True|False) "False" AddedProperty (True|False) "False" >
+
+<!ELEMENT OriginalValue ( #PCDATA )>
+
+<!ELEMENT NewValue ( #PCDATA )>
+
+<!ELEMENT Hierarchy  (ObjectName, Hierarchy*) >
+<!ATTLIST Hierarchy MicClass CDATA #REQUIRED>
+
+<!ELEMENT ObjectName  ( #PCDATA ) >
+
+<!ELEMENT Step (Obj,Details,Time,TimeTick* ,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST Step rID ID #REQUIRED retval CDATA #IMPLIED>
+
+<!ELEMENT HtmlStep (HTML,TimeTick*,(Step|HtmlStep|Doc)*,NodeArgs) >
+<!ATTLIST HtmlStep rID ID #REQUIRED >
+
+<!ELEMENT Obj ( #PCDATA ) >
+<!ATTLIST Obj plainTxt (False|True) "True">
+
+<!ELEMENT Details ( #PCDATA ) >
+<!ATTLIST Details plainTxt (False|True) "True">
+
+<!ELEMENT Time ( #PCDATA ) >
+
+<!ELEMENT HTML ( #PCDATA ) >
+
+<!ELEMENT Disp ( #PCDATA ) >
+
+<!ELEMENT TimeTick ( #PCDATA ) >
+
+<!ELEMENT NodeArgs (Disp,TopPane?,BtmPane?,ExtendedInfo? )>
+<!ATTLIST NodeArgs eType CDATA #REQUIRED icon CDATA #REQUIRED nRep CDATA #REQUIRED UserNote CDATA #IMPLIED filter (False|True) "True">
+<!ATTLIST NodeArgs status (Passed|Failed|Done|Warning|Information) "Done">
+<!ATTLIST NodeArgs iconSel CDATA #IMPLIED nType CDATA #IMPLIED MovieMarker CDATA "">
+<!ATTLIST NodeArgs Source CDATA #IMPLIED SourceLine CDATA #IMPLIED >
+
+<!ELEMENT TopPane (Path)>
+
+<!ELEMENT BtmPane ( (Path|WR)?,ASHilite?)>
+<!ATTLIST BtmPane vType CDATA "HTML">
+
+<!ELEMENT Path ( #PCDATA ) >
+
+<!ELEMENT ASHilite ( #PCDATA ) >
+
+<!ELEMENT WR ( #PCDATA ) >
+
+<!ELEMENT ExtendedInfo ( StepData ) >
+
+<!ATTLIST ExtendedInfo StepType CDATA #REQUIRED>
+<!ELEMENT DT (NodeArgs) >
+<!ATTLIST DT rID ID #REQUIRED>
+
+<!ELEMENT Summary (Param*)>
+<!ATTLIST Summary sTime CDATA #IMPLIED eTime CDATA #IMPLIED passed CDATA #IMPLIED failed CDATA #IMPLIED warnings CDATA #IMPLIED retval CDATA #IMPLIED stopped (False|True) "False" >
+
+<!ELEMENT Param (ParamName,ParamVal)+ >
+<!ATTLIST Param paramInOut (In|Out) "In">
+
+<!ELEMENT ParamName ( #PCDATA ) >
+
+<!ELEMENT ParamVal ( #PCDATA ) >
+
+]
+>
+<Report ver="2.0" tmZone="中国标准时间">
+<General productName="QuickTest Professional" productVer="11.00" os="Windows 7" host="S16302-A07"><DocLocation><![CDATA[C:\Users\student\Desktop\MYH\Test1]]></DocLocation></General>
+<Doc rID="T1"   productName= "QuickTest Professional"  >
+<DName><![CDATA[Test1]]></DName>
+<Res><![CDATA[Res9]]></Res>
+<DT rID="T2">
+<NodeArgs eType="Table" icon="2" nRep="4" filter="False" >
+<Disp><![CDATA[Run-Time Data Table]]></Disp>
+<BtmPane vType="Table">
+<Path><![CDATA[Default.xls]]></Path>
+</BtmPane>
+</NodeArgs>
+</DT>
+<DIter rID="T3" iterID="1" >
+<Action rID="T4">
+<AName><![CDATA[Action1]]></AName>
+<AIter rID="T5" iterID="1" >
+<Step rID="T6">
+<Obj plainTxt="False" ><![CDATA[Login_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[Dialog]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:07]]></Time>
+<TimeTick>1494384487</TimeTick>
+<Step rID="T7">
+<Obj plainTxt="False" ><![CDATA[Agent Name:.SetText]]></Obj>
+<Details plainTxt="False" ><![CDATA["muy"]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:07]]></Time>
+<TimeTick>1494384487</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="11" Source="Action1" SourceLine="0" >
+<Disp><![CDATA[Agent Name:.SetText]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T8">
+<Obj plainTxt="False" ><![CDATA[Password:.SetSecureText]]></Obj>
+<Details plainTxt="False" ><![CDATA["mercury"]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:07]]></Time>
+<TimeTick>1494384487</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="13" Source="Action1" SourceLine="1" >
+<Disp><![CDATA[Password:.SetSecureText]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T9">
+<Obj plainTxt="False" ><![CDATA[OK.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:07]]></Time>
+<TimeTick>1494384487</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="15" Source="Action1" SourceLine="2" >
+<Disp><![CDATA[OK.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T10">
+<Obj plainTxt="False" ><![CDATA[Flight Reservations.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:07]]></Time>
+<TimeTick>1494384487</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="16" Source="Action1" SourceLine="3" >
+<Disp><![CDATA[Flight Reservations.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T11">
+<Obj plainTxt="False" ><![CDATA[Flight Reservations]]></Obj>
+<Details plainTxt="False" ><![CDATA[Dialog]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:07]]></Time>
+<TimeTick>1494384487</TimeTick>
+<Step rID="T12">
+<Obj plainTxt="False" ><![CDATA[Agent name must be at least 4 characters long.]]></Obj>
+<Details plainTxt="False" ><![CDATA[Static]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:07]]></Time>
+<TimeTick>1494384487</TimeTick>
+<HtmlStep rID="T13">
+<HTML><![CDATA[<html>
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"/>
+<base href=""/>
+<link rel="stylesheet" href="Results.css">
+</head>
+<body bgcolor="#ffffff" leftmargin="20" marginwidth="20" topmargin="10" marginheight="10" vlink="#9966cc">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr><td height="1" class="bg_midblue"></td></tr>
+	<tr><td height="30"><span class="hl1"> Standard Output Value "Agent name must be at least 4 characters long._2": </span><span class="DoneHigh">Done</span></td></tr>
+	<tr><td height="2" class="bg_darkblue"></td></tr>
+	<tr><td height="10"></td></tr>
+	<tr><td><span class="text"><b>Date and Time:</b> 2017/5/10 - 10:48:07</span></td></tr>
+		
+	<tr><td height="15"></td></tr>
+</table>
+<!--Until here code from report media-->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" id=TABLE2><tr height="1"><td height="1" class="bg_gray_ccc"></td></tr><tr><td height="5"></td></tr></table><table>
+	<tr><td height="30"><span class="hl2"> Details</span></td></tr><tr><td height="5"></td></tr>
+</table>
+<table border="0" cellpadding="3" cellspacing="1" width="100%" bgcolor="#666699">
+	<tr>
+		<td bgcolor="white">
+		<table border="0" cellpadding="3" cellspacing="0" width="100%">
+<tr><td  class="hl3">Agent name must be at least 4 characters long._2 Results&nbsp;</td></tr>
+<tr><th colspan=4 height=1 class="bg_darkblue"></th></tr>
+<TR>
+				<td height=1 class="tablehl">Property Name&nbsp;&nbsp;</td>
+				<td height=1 class="tablehl">Captured Value&nbsp;&nbsp;</td>
+				<td height=1 class="tablehl">Type&nbsp;&nbsp;</td>
+				<td height=1 class="tablehl">Name&nbsp;&nbsp;</td>
+</TR>
+			<TR><th colspan=4 height=1 class="bg_gray_eee"></th></TR><tr><th colspan=4 height=1 class="bg_darkblue"></th></tr>
+<TR>
+				<td class="text">text&nbsp;</td>
+				<td class="text">Agent name must be at least 4 characters long.&nbsp;</td>
+				<td class="text">DataTable&nbsp;</td>
+				<td class="text">actual&nbsp;</td>
+</TR>
+			<TR><th colspan=4 height=1 class="bg_gray_eee"></th></TR>
+		</table>
+		</td>
+	</tr>
+</table>
+</body></html>]]></HTML>
+<TimeTick>1494384487</TimeTick>
+<NodeArgs eType="Verification" icon="8" nRep="19" Source="Action1" SourceLine="4" >
+<Disp><![CDATA[Output "Agent name must be at least 4 characters long._2"]]></Disp>
+</NodeArgs>
+</HtmlStep>
+<HtmlStep rID="T14">
+<HTML><![CDATA[<html>
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"/>
+<base href=""/>
+<link rel="stylesheet" href="Results.css">
+</head>
+<body bgcolor="#ffffff" leftmargin="20" marginwidth="20" topmargin="10" marginheight="10" vlink="#9966cc">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr><td height="1" class="bg_midblue"></td></tr>
+	<tr><td height="30"><span class="hl1"> Text Checkpoint "Agent name must be at least 4 characters long.": </span><span class="PassedHigh">Passed</span></td></tr>
+	<tr><td height="2" class="bg_darkblue"></td></tr>
+	<tr><td height="10"></td></tr>
+	<tr><td><span class="text"><b>Date and Time:</b> 2017/5/10 - 10:48:07</span></td></tr>
+		
+	<tr><td height="15"></td></tr>
+</table>
+<!--Until here code from report media-->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" id=TABLE2><tr height="1"><td height="1" class="bg_gray_ccc"></td></tr><tr><td height="5"></td></tr></table><table>
+	<tr><td height="30"><span class="hl2"> Details</span></td></tr><tr><td height="5"></td></tr>
+</table>
+<span class="text"></span><span class="text">Text Checkpoint: captured </span><span  class="Passed">"Agent name must be at least 4 characters long."</span><span  class="text"><br>
+</span><span  class="text">Match case: OFF<br>
+</span><span  class="text">Exact match: OFF<br>
+</span><span  class="text">Ignore spaces: ON</span></body></html>]]></HTML>
+<TimeTick>1494384487</TimeTick>
+<NodeArgs eType="Verification" icon="8" nRep="20" status="Passed" Source="Action1" SourceLine="5" >
+<Disp><![CDATA[Checkpoint "Agent name must be at least 4 characters long."]]></Disp>
+</NodeArgs>
+</HtmlStep>
+<NodeArgs eType="Context" icon="8" nRep="18" status="Passed" Source="Action1" SourceLine="4" >
+<Disp><![CDATA[Agent name must be at least 4 characters long.]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T15">
+<Obj plainTxt="False" ><![CDATA[确定.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:07]]></Time>
+<TimeTick>1494384487</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="22" Source="Action1" SourceLine="6" >
+<Disp><![CDATA[确定.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="17" status="Passed" Source="Action1" SourceLine="4" >
+<Disp><![CDATA[Flight Reservations]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T16">
+<Obj plainTxt="False" ><![CDATA[Cancel.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:07]]></Time>
+<TimeTick>1494384487</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="24" Source="Action1" SourceLine="7" >
+<Disp><![CDATA[Cancel.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T17">
+<Obj plainTxt="False" ><![CDATA[SystemUtil]]></Obj>
+<Details plainTxt="False" ><![CDATA[SystemUtil]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:08]]></Time>
+<TimeTick>1494384488</TimeTick>
+<Step rID="T18">
+<Obj plainTxt="False" ><![CDATA[Run "C:\Program Files\HP\QuickTest Professional\samples\flight\app\flight4a.exe",1]]></Obj>
+<Details plainTxt="False" ><![CDATA[Run "C:\Program Files\HP\QuickTest Professional\samples\flight\app\flight4a.exe",1]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:08]]></Time>
+<TimeTick>1494384488</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="28" status="Passed" Source="Action1" SourceLine="21" >
+<Disp><![CDATA[Run "C:\Program Files\HP\QuickTest Professional\samples\flight\app\flight4a.exe",1]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="9" nRep="27" status="Passed" Source="Action1" SourceLine="21" >
+<Disp><![CDATA[SystemUtil]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="10" status="Passed" Source="Action1" SourceLine="0" >
+<Disp><![CDATA[Login_2]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="StartIteration" icon="3" nRep="8" status="Passed" >
+<Disp><![CDATA[Action1 Iteration 1 (Row 1)]]></Disp>
+</NodeArgs>
+</AIter>
+<AIter rID="T19" iterID="2" >
+<Step rID="T20">
+<Obj plainTxt="False" ><![CDATA[Login_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[Dialog]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:08]]></Time>
+<TimeTick>1494384488</TimeTick>
+<Step rID="T21">
+<Obj plainTxt="False" ><![CDATA[Agent Name:.SetText]]></Obj>
+<Details plainTxt="False" ><![CDATA[""]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:08]]></Time>
+<TimeTick>1494384488</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="33" Source="Action1" SourceLine="0" >
+<Disp><![CDATA[Agent Name:.SetText]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T22">
+<Obj plainTxt="False" ><![CDATA[Password:.SetSecureText]]></Obj>
+<Details plainTxt="False" ><![CDATA[""]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:08]]></Time>
+<TimeTick>1494384488</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="35" Source="Action1" SourceLine="1" >
+<Disp><![CDATA[Password:.SetSecureText]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T23">
+<Obj plainTxt="False" ><![CDATA[OK.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:08]]></Time>
+<TimeTick>1494384488</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="37" Source="Action1" SourceLine="2" >
+<Disp><![CDATA[OK.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T24">
+<Obj plainTxt="False" ><![CDATA[Flight Reservations.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:08]]></Time>
+<TimeTick>1494384488</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="38" Source="Action1" SourceLine="3" >
+<Disp><![CDATA[Flight Reservations.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T25">
+<Obj plainTxt="False" ><![CDATA[Flight Reservations]]></Obj>
+<Details plainTxt="False" ><![CDATA[Dialog]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:08]]></Time>
+<TimeTick>1494384488</TimeTick>
+<Step rID="T26">
+<Obj plainTxt="False" ><![CDATA[Agent name must be at least 4 characters long.]]></Obj>
+<Details plainTxt="False" ><![CDATA[Static]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:08]]></Time>
+<TimeTick>1494384488</TimeTick>
+<HtmlStep rID="T27">
+<HTML><![CDATA[<html>
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"/>
+<base href=""/>
+<link rel="stylesheet" href="Results.css">
+</head>
+<body bgcolor="#ffffff" leftmargin="20" marginwidth="20" topmargin="10" marginheight="10" vlink="#9966cc">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr><td height="1" class="bg_midblue"></td></tr>
+	<tr><td height="30"><span class="hl1"> Standard Output Value "Agent name must be at least 4 characters long._2": </span><span class="DoneHigh">Done</span></td></tr>
+	<tr><td height="2" class="bg_darkblue"></td></tr>
+	<tr><td height="10"></td></tr>
+	<tr><td><span class="text"><b>Date and Time:</b> 2017/5/10 - 10:48:08</span></td></tr>
+		
+	<tr><td height="15"></td></tr>
+</table>
+<!--Until here code from report media-->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" id=TABLE2><tr height="1"><td height="1" class="bg_gray_ccc"></td></tr><tr><td height="5"></td></tr></table><table>
+	<tr><td height="30"><span class="hl2"> Details</span></td></tr><tr><td height="5"></td></tr>
+</table>
+<table border="0" cellpadding="3" cellspacing="1" width="100%" bgcolor="#666699">
+	<tr>
+		<td bgcolor="white">
+		<table border="0" cellpadding="3" cellspacing="0" width="100%">
+<tr><td  class="hl3">Agent name must be at least 4 characters long._2 Results&nbsp;</td></tr>
+<tr><th colspan=4 height=1 class="bg_darkblue"></th></tr>
+<TR>
+				<td height=1 class="tablehl">Property Name&nbsp;&nbsp;</td>
+				<td height=1 class="tablehl">Captured Value&nbsp;&nbsp;</td>
+				<td height=1 class="tablehl">Type&nbsp;&nbsp;</td>
+				<td height=1 class="tablehl">Name&nbsp;&nbsp;</td>
+</TR>
+			<TR><th colspan=4 height=1 class="bg_gray_eee"></th></TR><tr><th colspan=4 height=1 class="bg_darkblue"></th></tr>
+<TR>
+				<td class="text">text&nbsp;</td>
+				<td class="text">Please enter agent name&nbsp;</td>
+				<td class="text">DataTable&nbsp;</td>
+				<td class="text">actual&nbsp;</td>
+</TR>
+			<TR><th colspan=4 height=1 class="bg_gray_eee"></th></TR>
+		</table>
+		</td>
+	</tr>
+</table>
+</body></html>]]></HTML>
+<TimeTick>1494384488</TimeTick>
+<NodeArgs eType="Verification" icon="8" nRep="41" Source="Action1" SourceLine="4" >
+<Disp><![CDATA[Output "Agent name must be at least 4 characters long._2"]]></Disp>
+</NodeArgs>
+</HtmlStep>
+<HtmlStep rID="T28">
+<HTML><![CDATA[<html>
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"/>
+<base href=""/>
+<link rel="stylesheet" href="Results.css">
+</head>
+<body bgcolor="#ffffff" leftmargin="20" marginwidth="20" topmargin="10" marginheight="10" vlink="#9966cc">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr><td height="1" class="bg_midblue"></td></tr>
+	<tr><td height="30"><span class="hl1"> Text Checkpoint "Agent name must be at least 4 characters long.": </span><span class="FailedHigh">Failed</span></td></tr>
+	<tr><td height="2" class="bg_darkblue"></td></tr>
+	<tr><td height="10"></td></tr>
+	<tr><td><span class="text"><b>Date and Time:</b> 2017/5/10 - 10:48:19</span></td></tr>
+	<tr><td height=5></td></tr>
+<tr><td><span class="text"><b>Checkpoint Timeout</b>: Waited 10 seconds out of a possible 10 seconds</span></td></tr>	
+	<tr><td height="15"></td></tr>
+</table>
+<!--Until here code from report media-->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" id=TABLE2><tr height="1"><td height="1" class="bg_gray_ccc"></td></tr><tr><td height="5"></td></tr></table><table>
+	<tr><td height="30"><span class="hl2"> Details</span></td></tr><tr><td height="5"></td></tr>
+</table>
+<span class="text"></span><span class="text">Text Checkpoint: captured </span><span  class="Failed">"Please enter agent name"</span><span  class="text"></span><span class="text">, expected </span><span  class="Passed">"Please input agent name"</span><span  class="text"><br>
+</span><span  class="text">Match case: OFF<br>
+</span><span  class="text">Exact match: OFF<br>
+</span><span  class="text">Ignore spaces: ON</span></body></html>]]></HTML>
+<TimeTick>1494384499</TimeTick>
+<NodeArgs eType="Verification" icon="8" nRep="42" status="Failed" Source="Action1" SourceLine="5" >
+<Disp><![CDATA[Checkpoint "Agent name must be at least 4 characters long."]]></Disp>
+<BtmPane vType="ViewerGen.SSViewerGen">
+<Path><![CDATA[ZIP::Act1\Row2\ssf1.xml]]></Path>
+<ASHilite><![CDATA[1378350]]></ASHilite>
+</BtmPane>
+</NodeArgs>
+</HtmlStep>
+<NodeArgs eType="Context" icon="8" nRep="40" status="Failed" Source="Action1" SourceLine="4" >
+<Disp><![CDATA[Agent name must be at least 4 characters long.]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T29">
+<Obj plainTxt="False" ><![CDATA[确定.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:19]]></Time>
+<TimeTick>1494384499</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="44" Source="Action1" SourceLine="6" >
+<Disp><![CDATA[确定.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="39" status="Failed" Source="Action1" SourceLine="4" >
+<Disp><![CDATA[Flight Reservations]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T30">
+<Obj plainTxt="False" ><![CDATA[Cancel.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:19]]></Time>
+<TimeTick>1494384499</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="46" Source="Action1" SourceLine="7" >
+<Disp><![CDATA[Cancel.Click]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="32" status="Failed" Source="Action1" SourceLine="0" >
+<Disp><![CDATA[Login_2]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T31">
+<Obj ><![CDATA[登陆功能测试]]></Obj>
+<Details ><![CDATA[预期值为：Please input agent name实际值为：Please enter agent name]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:19]]></Time>
+<TimeTick>1494384499</TimeTick>
+<NodeArgs eType="User" icon="10" nRep="47" status="Passed" Source="Action1" SourceLine="18" >
+<Disp><![CDATA[登陆功能测试]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T32">
+<Obj plainTxt="False" ><![CDATA[SystemUtil]]></Obj>
+<Details plainTxt="False" ><![CDATA[SystemUtil]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:19]]></Time>
+<TimeTick>1494384499</TimeTick>
+<Step rID="T33">
+<Obj plainTxt="False" ><![CDATA[Run "C:\Program Files\HP\QuickTest Professional\samples\flight\app\flight4a.exe",1]]></Obj>
+<Details plainTxt="False" ><![CDATA[Run "C:\Program Files\HP\QuickTest Professional\samples\flight\app\flight4a.exe",1]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:19]]></Time>
+<TimeTick>1494384499</TimeTick>
+<NodeArgs eType="Replay" icon="9" nRep="51" status="Passed" Source="Action1" SourceLine="21" >
+<Disp><![CDATA[Run "C:\Program Files\HP\QuickTest Professional\samples\flight\app\flight4a.exe",1]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="9" nRep="50" status="Passed" Source="Action1" SourceLine="21" >
+<Disp><![CDATA[SystemUtil]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="StartIteration" icon="3" nRep="30" status="Failed" >
+<Disp><![CDATA[Action1 Iteration 2 (Row 2)]]></Disp>
+</NodeArgs>
+</AIter>
+<AIter rID="T34" iterID="3" >
+<Step rID="T35">
+<Obj plainTxt="False" ><![CDATA[Login_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[Dialog]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:19]]></Time>
+<TimeTick>1494384499</TimeTick>
+<Step rID="T36">
+<Obj plainTxt="False" ><![CDATA[Agent Name:.SetText]]></Obj>
+<Details plainTxt="False" ><![CDATA["muyh"]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:19]]></Time>
+<TimeTick>1494384499</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="56" Source="Action1" SourceLine="0" >
+<Disp><![CDATA[Agent Name:.SetText]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T37">
+<Obj plainTxt="False" ><![CDATA[Password:.SetSecureText]]></Obj>
+<Details plainTxt="False" ><![CDATA[""]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:19]]></Time>
+<TimeTick>1494384499</TimeTick>
+<NodeArgs eType="Replay" icon="6" nRep="58" Source="Action1" SourceLine="1" >
+<Disp><![CDATA[Password:.SetSecureText]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T38">
+<Obj plainTxt="False" ><![CDATA[OK.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:19]]></Time>
+<TimeTick>1494384499</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="60" Source="Action1" SourceLine="2" >
+<Disp><![CDATA[OK.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T39">
+<Obj plainTxt="False" ><![CDATA[Flight Reservations.Exist]]></Obj>
+<Details plainTxt="False" ><![CDATA["Object exists"]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:19]]></Time>
+<TimeTick>1494384499</TimeTick>
+<NodeArgs eType="Replay" icon="5" nRep="61" Source="Action1" SourceLine="3" >
+<Disp><![CDATA[Flight Reservations.Exist]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T40">
+<Obj plainTxt="False" ><![CDATA[Flight Reservations]]></Obj>
+<Details plainTxt="False" ><![CDATA[Dialog]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:19]]></Time>
+<TimeTick>1494384499</TimeTick>
+<Step rID="T41">
+<Obj plainTxt="False" ><![CDATA[Agent name must be at least 4 characters long.]]></Obj>
+<Details plainTxt="False" ><![CDATA[Static]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:19]]></Time>
+<TimeTick>1494384499</TimeTick>
+<HtmlStep rID="T42">
+<HTML><![CDATA[<html>
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"/>
+<base href=""/>
+<link rel="stylesheet" href="Results.css">
+</head>
+<body bgcolor="#ffffff" leftmargin="20" marginwidth="20" topmargin="10" marginheight="10" vlink="#9966cc">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr><td height="1" class="bg_midblue"></td></tr>
+	<tr><td height="30"><span class="hl1"> Standard Output Value "Agent name must be at least 4 characters long._2": </span><span class="DoneHigh">Done</span></td></tr>
+	<tr><td height="2" class="bg_darkblue"></td></tr>
+	<tr><td height="10"></td></tr>
+	<tr><td><span class="text"><b>Date and Time:</b> 2017/5/10 - 10:48:19</span></td></tr>
+		
+	<tr><td height="15"></td></tr>
+</table>
+<!--Until here code from report media-->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" id=TABLE2><tr height="1"><td height="1" class="bg_gray_ccc"></td></tr><tr><td height="5"></td></tr></table><table>
+	<tr><td height="30"><span class="hl2"> Details</span></td></tr><tr><td height="5"></td></tr>
+</table>
+<table border="0" cellpadding="3" cellspacing="1" width="100%" bgcolor="#666699">
+	<tr>
+		<td bgcolor="white">
+		<table border="0" cellpadding="3" cellspacing="0" width="100%">
+<tr><td  class="hl3">Agent name must be at least 4 characters long._2 Results&nbsp;</td></tr>
+<tr><th colspan=4 height=1 class="bg_darkblue"></th></tr>
+<TR>
+				<td height=1 class="tablehl">Property Name&nbsp;&nbsp;</td>
+				<td height=1 class="tablehl">Captured Value&nbsp;&nbsp;</td>
+				<td height=1 class="tablehl">Type&nbsp;&nbsp;</td>
+				<td height=1 class="tablehl">Name&nbsp;&nbsp;</td>
+</TR>
+			<TR><th colspan=4 height=1 class="bg_gray_eee"></th></TR><tr><th colspan=4 height=1 class="bg_darkblue"></th></tr>
+<TR>
+				<td class="text">text&nbsp;</td>
+				<td class="text">Please enter password&nbsp;</td>
+				<td class="text">DataTable&nbsp;</td>
+				<td class="text">actual&nbsp;</td>
+</TR>
+			<TR><th colspan=4 height=1 class="bg_gray_eee"></th></TR>
+		</table>
+		</td>
+	</tr>
+</table>
+</body></html>]]></HTML>
+<TimeTick>1494384499</TimeTick>
+<NodeArgs eType="Verification" icon="8" nRep="64" Source="Action1" SourceLine="4" >
+<Disp><![CDATA[Output "Agent name must be at least 4 characters long._2"]]></Disp>
+</NodeArgs>
+</HtmlStep>
+<NodeArgs eType="Context" icon="8" nRep="63" Source="Action1" SourceLine="4" >
+<Disp><![CDATA[Agent name must be at least 4 characters long.]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T43">
+<Obj plainTxt="False" ><![CDATA[Agent name must be at least 4 characters long.]]></Obj>
+<Details plainTxt="False" ><![CDATA[The operation cannot be performed]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:28]]></Time>
+<TimeTick>1494384508</TimeTick>
+<Step rID="T44">
+<Obj plainTxt="False" ><![CDATA[Agent name must be at least 4 characters long.]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>window id = 65535<br>Native Class = Static<br>]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:28]]></Time>
+<TimeTick>1494384508</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="66" status="Warning" nType="Description" Source="Action1" SourceLine="5" >
+<Disp><![CDATA[Agent name must be at least 4 characters long.]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="8" nRep="65" status="Failed" nType="Run Error" Source="Action1" SourceLine="5" >
+<Disp><![CDATA[Agent name must be at least 4 characters long.]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="62" status="Failed" Source="Action1" SourceLine="4" >
+<Disp><![CDATA[Flight Reservations]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="55" status="Failed" Source="Action1" SourceLine="0" >
+<Disp><![CDATA[Login_2]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T45">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[The operation cannot be performed<BR>Line (6): &quot;Dialog(&quot;Login_2&quot;).Dialog(&quot;Flight Reservations&quot;).Static(&quot;Agent name must be at least 4 characters long.&quot;).Check CheckPoint(&quot;Agent name must be at least 4 characters long.&quot;)&quot;. ]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:28]]></Time>
+<TimeTick>1494384508</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="67" status="Failed" Source="Action1" SourceLine="5" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T46">
+<Obj plainTxt="False" ><![CDATA[Login_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[Dialog]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:54]]></Time>
+<TimeTick>1494384534</TimeTick>
+<Step rID="T47">
+<Obj plainTxt="False" ><![CDATA[Flight Reservations]]></Obj>
+<Details plainTxt="False" ><![CDATA[Dialog]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:54]]></Time>
+<TimeTick>1494384534</TimeTick>
+<Step rID="T48">
+<Obj plainTxt="False" ><![CDATA[确定.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:54]]></Time>
+<TimeTick>1494384534</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="84" status="Warning" Source="Action1" SourceLine="5" >
+<Disp><![CDATA[确定.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T49">
+<Obj plainTxt="False" ><![CDATA[确定]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot find the "确定" object's parent "Login_2" (class Dialog). Verify that parent properties match an object currently displayed in your application.]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:54]]></Time>
+<TimeTick>1494384534</TimeTick>
+<Step rID="T50">
+<Obj plainTxt="False" ><![CDATA[Login_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>Text = Login<br>Native Class = #32770<br>is owned window = 0<br>is child window = 0<br>]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:54]]></Time>
+<TimeTick>1494384534</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="86" status="Warning" nType="Parent description" Source="Action1" SourceLine="5" >
+<Disp><![CDATA[Login_2]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="7" nRep="85" status="Failed" nType="Run Error" Source="Action1" SourceLine="5" >
+<Disp><![CDATA[确定]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="83" status="Failed" Source="Action1" SourceLine="5" >
+<Disp><![CDATA[Flight Reservations]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="82" status="Failed" Source="Action1" SourceLine="5" >
+<Disp><![CDATA[Login_2]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T51">
+<Obj plainTxt="False" ><![CDATA[Run Error]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot find the &quot;确定&quot; object's parent &quot;Login_2&quot; (class Dialog). Verify that parent properties match an object currently displayed in your application.<BR>Line (7): &quot;Dialog(&quot;Login_2&quot;).Dialog(&quot;Flight Reservations&quot;).WinButton(&quot;确定&quot;).Click&quot;. ]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:54]]></Time>
+<TimeTick>1494384534</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="87" status="Failed" Source="Action1" SourceLine="6" >
+<Disp><![CDATA[Run Error]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T52">
+<Obj plainTxt="False" ><![CDATA[Login_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[Dialog]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:59]]></Time>
+<TimeTick>1494384539</TimeTick>
+<Step rID="T53">
+<Obj plainTxt="False" ><![CDATA[Cancel.Click]]></Obj>
+<Details plainTxt="False" ><![CDATA[]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:59]]></Time>
+<TimeTick>1494384539</TimeTick>
+<NodeArgs eType="Replay" icon="7" nRep="94" status="Warning" Source="Action1" SourceLine="6" >
+<Disp><![CDATA[Cancel.Click]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T54">
+<Obj plainTxt="False" ><![CDATA[Cancel]]></Obj>
+<Details plainTxt="False" ><![CDATA[Cannot find the "Cancel" object's parent "Login_2" (class Dialog). Verify that parent properties match an object currently displayed in your application.]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:59]]></Time>
+<TimeTick>1494384539</TimeTick>
+<Step rID="T55">
+<Obj plainTxt="False" ><![CDATA[Login_2]]></Obj>
+<Details plainTxt="False" ><![CDATA[Object's physical description:<br>Text = Login<br>Native Class = #32770<br>is owned window = 0<br>is child window = 0<br>]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:59]]></Time>
+<TimeTick>1494384539</TimeTick>
+<NodeArgs eType="Replay" icon="11" nRep="96" status="Warning" nType="Parent description" Source="Action1" SourceLine="6" >
+<Disp><![CDATA[Login_2]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Replay" icon="7" nRep="95" status="Failed" nType="Run Error" Source="Action1" SourceLine="6" >
+<Disp><![CDATA[Cancel]]></Disp>
+</NodeArgs>
+</Step>
+<Step rID="T56">
+<Obj plainTxt="False" ><![CDATA[Stop Run]]></Obj>
+<Details plainTxt="False" ><![CDATA[Run stopped by user.]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:59]]></Time>
+<TimeTick>1494384539</TimeTick>
+<NodeArgs eType="General" icon="12" nRep="97" >
+<Disp><![CDATA[Stop Run]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="Context" icon="5" nRep="93" status="Failed" Source="Action1" SourceLine="6" >
+<Disp><![CDATA[Login_2]]></Disp>
+</NodeArgs>
+</Step>
+<NodeArgs eType="StartIteration" icon="3" nRep="53" status="Failed" >
+<Disp><![CDATA[Action1 Iteration 3 (Row 3)]]></Disp>
+</NodeArgs>
+</AIter>
+<Summary sTime="2017/5/10 - 10:48:07" eTime="2017/5/10 - 10:48:59" passed="4" failed="6" warnings="5" ></Summary>
+<NodeArgs eType="StartAction" icon="4" nRep="7" status="Failed" >
+<Disp><![CDATA[Action1 Summary]]></Disp>
+</NodeArgs>
+</Action>
+<NodeArgs eType="StartIteration" icon="3" nRep="6" status="Failed" >
+<Disp><![CDATA[Test1 Iteration 1 (Row 1)]]></Disp>
+</NodeArgs>
+</DIter>
+<Step rID="T57">
+<Obj plainTxt="False" ><![CDATA[Stop Run]]></Obj>
+<Details plainTxt="False" ><![CDATA[Run stopped by user.]]></Details>
+<Time><![CDATA[2017/5/10 - 10:48:59]]></Time>
+<TimeTick>1494384539</TimeTick>
+<NodeArgs eType="General" icon="13" nRep="101" >
+<Disp><![CDATA[Stop Run]]></Disp>
+</NodeArgs>
+</Step>
+<Summary sTime="2017/5/10 - 10:48:06" eTime="2017/5/10 - 10:48:59" passed="4" failed="6" warnings="5" stopped="True" ></Summary>
+<NodeArgs eType="StartTest" icon="1" nRep="3" status="Failed" >
+<Disp><![CDATA[Test Test1 Summary]]></Disp>
+</NodeArgs>
+</Doc>
+</Report>
